@@ -22,8 +22,8 @@
         </div>
         <nav class="nav">
           <a href="#how-it-works">How it works</a>
-          <a href="#upload">Start now</a>
-          <a href="#contact">Contact</a>
+          <a href="#samples">Samples</a>
+          <a href="https://forms.gle/CvR5QweyBDiJBD8LA" target="_blank" rel="noopener">Start now</a>
         </nav>
       </div>
     </header>
@@ -36,7 +36,7 @@
             <p>
               From background removal to color grading and retouching — describe what you need, upload your image, and we’ll deliver polished results quickly.
             </p>
-            <a class="cta" href="#upload">Get started</a>
+            <a class="cta" href="https://forms.gle/CvR5QweyBDiJBD8LA" target="_blank" rel="noopener">অর্ডার করুন</a>
           </div>
           <div class="hero-art" aria-hidden="true"></div>
         </div>
@@ -48,13 +48,13 @@
           <div class="steps">
             <div class="step">
               <div class="step-num">1</div>
-              <h4>Upload</h4>
-              <p>Select your photo (JPG/PNG/WEBP) up to 20 MB.</p>
+              <h4>Form</h4>
+              <p>Open the Google Form and share your details.</p>
             </div>
             <div class="step">
               <div class="step-num">2</div>
               <h4>Instruct</h4>
-              <p>Describe edits: background, color, retouching, or specific requests.</p>
+              <p>Describe the edits and attach your photo in the form.</p>
             </div>
             <div class="step">
               <div class="step-num">3</div>
@@ -65,100 +65,38 @@
         </div>
       </section>
 
-      <section id="upload" class="upload">
+      <div class="divider"></div>
+
+      <section id="samples" class="samples">
+        <div class="container">
+          <h3>Sample</h3>
+          <p class="sub">Before vs After (example)</p>
+          <div class="sample-card">
+            <img src="sample1.jpg" alt="Before and After photo editing sample" />
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="order" class="upload">
         <div class="container">
           <h3>Start your order</h3>
-          <form id="orderForm" novalidate data-emailjs-service="YOUR_SERVICE_ID" data-emailjs-template="YOUR_TEMPLATE_ID" data-emailjs-public="YOUR_PUBLIC_KEY">
-            <div class="grid">
-              <div class="field">
-                <label for="name">Full name</label>
-                <input id="name" name="name" type="text" placeholder="Jane Doe" required />
-                <span class="error" data-error-for="name"></span>
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="jane@example.com" required />
-                <span class="error" data-error-for="email"></span>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="service">Service</label>
-              <select id="service" name="service" required>
-                <option value="" disabled selected>Select a service</option>
-                <option>Background removal</option>
-                <option>Color correction</option>
-                <option>Skin retouching</option>
-                <option>Object removal</option>
-                <option>Other (describe below)</option>
-              </select>
-              <span class="error" data-error-for="service"></span>
-            </div>
-
-            <div class="field">
-              <label for="instructions">Instructions</label>
-              <textarea id="instructions" name="instructions" rows="5" placeholder="Tell us exactly what to do (e.g., remove background, smooth skin, brighten colors)..." required></textarea>
-              <span class="error" data-error-for="instructions"></span>
-            </div>
-
-            <div class="field">
-              <label>Upload your photo</label>
-              <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload image by clicking or dragging" aria-describedby="fileHelp">
-                <input id="photo" name="photo" type="file" accept="image/*" hidden />
-                <div class="dz-inner">
-                  <div class="dz-icon">⬆️</div>
-                  <p>Drag & drop your image here, or <span class="linklike">browse</span></p>
-                  <p class="sub">JPG, PNG, or WEBP up to 20 MB</p>
-                </div>
-              </div>
-              <div id="preview" class="preview" hidden>
-                <img id="previewImg" alt="Selected image preview" />
-                <button type="button" id="removeFile" class="linklike">Remove</button>
-              </div>
-              <small id="fileHelp" class="help">We support common image formats. For RAW files, please zip before uploading.</small>
-              <span class="error" data-error-for="photo"></span>
-            </div>
-
-            <div class="grid">
-              <div class="field">
-                <label for="urgency">Turnaround</label>
-                <select id="urgency" name="urgency" required>
-                  <option value="" disabled selected>Select</option>
-                  <option>24 hours (rush)</option>
-                  <option>48 hours</option>
-                  <option>3-5 days</option>
-                </select>
-                <span class="error" data-error-for="urgency"></span>
-              </div>
-              <div class="field">
-                <label for="referenceUrl">Reference link (optional)</label>
-                <input id="referenceUrl" name="referenceUrl" type="url" placeholder="https://example.com/reference" />
-              </div>
-            </div>
-
-            <div class="actions">
-              <button class="cta" type="submit">Submit request</button>
-              <div id="formStatus" role="status" aria-live="polite"></div>
-            </div>
-          </form>
+          <p class="sub">We use Google Forms to collect your instructions and files securely.</p>
+          <div class="actions">
+            <a class="cta" href="https://forms.gle/CvR5QweyBDiJBD8LA" target="_blank" rel="noopener">অর্ডার করুন</a>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h3>Questions?</h3>
-          <p>Email us at <a href="mailto:mdsajidulbd@gmail.com">mdsajidulbd@gmail.com</a></p>
-        </div>
-      </section>
+      
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> Pro Photo Edit. All rights reserved.</p>
+        <p>&copy; Pro Photo Edit. All rights reserved.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
   </body>
   </html>
 

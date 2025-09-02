@@ -170,7 +170,8 @@ form?.addEventListener('submit', async (e) => {
     form.reset();
     clearPreview();
   } catch (err) {
-    statusEl.textContent = 'Something went wrong submitting your request.';
+    const msg = (err && err.text) || (err && err.message) || 'Something went wrong submitting your request.';
+    statusEl.textContent = msg + ' Please check your EmailJS Service ID, Template ID, and Public Key.';
   }
 });
 

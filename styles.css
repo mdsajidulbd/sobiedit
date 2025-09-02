@@ -103,6 +103,10 @@ body {
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.15;
   margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #ffffff, #b4c7ff 40%, #6ea8fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-copy p {
@@ -122,10 +126,21 @@ body {
   box-shadow: 0 10px 20px rgba(31, 111, 235, 0.25);
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta:hover {
   filter: brightness(1.08);
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(600px 200px at 50% 50%, rgba(255,255,255,0.25), transparent 40%);
+  pointer-events: none;
 }
 
 .hero-art {
@@ -144,8 +159,61 @@ body {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%23ffffff" stop-opacity="0.2"/><stop offset="1" stop-color="%23ffffff" stop-opacity="0.05"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>') center/cover no-repeat;
 }
 
+/* Floating orb */
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 12%;
+  top: 18%;
+  border-radius: 50%;
+  filter: blur(24px);
+  background: radial-gradient(circle at 30% 30%, rgba(110,168,254,0.65), rgba(110,168,254,0) 60%);
+  animation: float 7s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-18px); }
+}
+
 .how, .upload, .contact {
   padding: 36px 0;
+}
+
+.samples {
+  padding: 36px 0;
+}
+
+.samples .sample-card {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 10px;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.samples img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.samples .sample-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(110,168,254,0.35);
+  box-shadow: 0 10px 30px rgba(110,168,254,0.12);
+}
+
+/* Gradient section dividers */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(110,168,254,0), rgba(110,168,254,0.35), rgba(110,168,254,0));
+  border: 0;
+  margin: 8px 0 24px 0;
 }
 
 .how h3, .upload h3, .contact h3 {
@@ -164,6 +232,7 @@ body {
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 12px;
   padding: 16px;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .step-num {
@@ -175,6 +244,12 @@ body {
   background: rgba(110,168,254,0.15);
   border: 1px solid rgba(110,168,254,0.3);
   margin-bottom: 8px;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(110,168,254,0.35);
+  box-shadow: 0 10px 30px rgba(110,168,254,0.12);
 }
 
 form {
@@ -273,6 +348,15 @@ input:focus, select:focus, textarea:focus, .dropzone:focus {
   margin-top: 10px;
 }
 
+/* Center align order section */
+.upload .container {
+  text-align: center;
+}
+
+.upload .actions {
+  justify-content: center;
+}
+
 #formStatus {
   color: var(--muted);
 }
@@ -281,6 +365,10 @@ input:focus, select:focus, textarea:focus, .dropzone:focus {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 18px 0;
   color: var(--muted);
+}
+
+.site-footer .container {
+  text-align: center;
 }
 
 @media (max-width: 900px) {
